@@ -1,0 +1,193 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
+# : Manager {{{
+
+[manager]
+cwd = { fg = "#1c212b" }
+
+# Hovered
+hovered         = { reversed = true }
+preview_hovered = { underline = true }
+
+# Find
+find_keyword  = { fg = "#24ffb6", bold = true, italic = true, underline = true }
+find_position = { fg = "#b8cfe680", bg = "reset", bold = true, italic = true }
+
+# Marker
+marker_copied   = { fg = "#409fff40", bg = "#409fff40" }
+marker_cut      = { fg = "#ff246d", bg = "#ff246d" }
+marker_marked   = { fg = "#1c212b", bg = "#1c212b" }
+marker_selected = { fg = "#24ffb6", bg = "#24ffb6" }
+
+# Tab
+tab_active   = { reversed = true }
+tab_inactive = {}
+tab_width    = 1
+
+# Count
+count_copied   = { fg = "#cccac2", bg = "#409fff40" }
+count_cut      = { fg = "#cccac2", bg = "#ff246d" }
+count_selected = { fg = "#cccac2", bg = "#24ffb6" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#171b24" }
+
+# : }}}
+
+
+# : Mode {{{
+
+[mode]
+
+normal_main = { fg = "#cccac2", bg = "#242936", bold = true }
+normal_alt  = { fg = "#242936", bg = "#b8cfe680" }
+
+# Select mode
+select_main = { fg = "#cccac2", bg = "#409fff40", bold = true }
+select_alt  = { fg = "#409fff40", bg = "#b8cfe680" }
+
+# Unset mode
+unset_main = { fg = "#cccac2", bg = "#242936", bold = true }
+unset_alt  = { fg = "#242936", bg = "#b8cfe680" }
+
+# : }}}
+
+
+# : Status bar {{{
+
+[status]
+separator_open  = ""
+separator_close = ""
+
+# Progress
+progress_label  = { fg = "#ffffff", bold = true }
+progress_normal = { fg = "#242936", bg = "#24ffb6" }
+progress_error  = { fg = "#ff246d", bg = "#24ffb6" }
+
+# Permissions
+perm_sep   = { fg = "#171b24" }
+perm_type  = { fg = "#242936" }
+perm_read  = { fg = "#24ffb6" }
+perm_write = { fg = "#ff246d" }
+perm_exec  = { fg = "#409fff40" }
+
+# TODO: -- remove these once Yazi 0.4 gets released
+separator_style = { fg = "#b8cfe680", bg = "#b8cfe680" }
+mode_normal     = { fg = "#cccac2", bg = "#242936", bold = true }
+mode_select     = { fg = "#cccac2", bg = "#409fff40", bold = true }
+mode_unset      = { fg = "#cccac2", bg = "#242936", bold = true }
+permissions_t   = { fg = "#242936" }
+permissions_r   = { fg = "#24ffb6" }
+permissions_w   = { fg = "#ff246d" }
+permissions_x   = { fg = "#409fff40" }
+permissions_s   = { fg = "#171b24" }
+# TODO: remove these once Yazi 0.4 gets released --
+
+# : }}}
+
+
+# : Pick {{{
+
+[pick]
+border   = { fg = "#242936" }
+active   = { fg = "#b8cfe680", bold = true }
+inactive = {}
+
+# TODO: -- remove these once Yazi 0.4 gets released
+[select]
+border   = { fg = "#242936" }
+active   = { fg = "#b8cfe680", bold = true }
+inactive = {}
+# TODO: remove these once Yazi 0.4 gets released --
+
+# : }}}
+
+
+# : Input {{{
+
+[input]
+border   = { fg = "#242936" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+# : }}}
+
+
+# : Completion {{{
+
+[completion]
+border = { fg = "#242936" }
+
+# : }}}
+
+
+# : Tasks {{{
+
+[tasks]
+border  = { fg = "#242936" }
+title   = {}
+hovered = { fg = "#b8cfe680", underline = true }
+
+# : }}}
+
+
+# : Which {{{
+
+[which]
+mask            = { bg = "#b8cfe680" }
+cand            = { fg = "#1c212b" }
+rest            = { fg = "#707a8c" }
+desc            = { fg = "#b8cfe680" }
+separator       = "  "
+separator_style = { fg = "#b8cfe680" }
+
+# : }}}
+
+
+# : Help {{{
+
+[help]
+on      = { fg = "#1c212b" }
+run     = { fg = "#b8cfe680" }
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#b8cfe680", bg = "#242936" }
+
+# : }}}
+
+
+# : Notify {{{
+
+[notify]
+title_info  = { fg = "#409fff40" }
+title_warn  = { fg = "#24ffb6" }
+title_error = { fg = "#ff246d" }
+
+# : }}}
+
+
+# : File-specific styles {{{
+
+[filetype]
+
+rules = [
+	# Images
+	{ mime = "image/*", fg = "#1c212b" },
+
+	# Media
+	{ mime = "{audio,video}/*", fg = "#24ffb6" },
+
+	# Archives
+	{ mime = "application/*zip", fg = "#b8cfe680" },
+	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "#b8cfe680" },
+
+	# Documents
+	{ mime = "application/{pdf,doc,rtf}", fg = "#409fff40" },
+
+	# Fallback
+	{ name = "*", fg = "#242936" },
+	{ name = "*/", fg = "#242936" }
+]
+
+# : }}}
